@@ -1,21 +1,43 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My New Website</title>
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <script src="https://unpkg.com/vue@next"></script>
-  </head>
-  <body>
-    <div id="app">
-      {{ hello }}
-    </div>
-    <script>
-      const ConditionalRenderingApp = {
-        data() {
-          return {
-            hello: "Hello world"
-          }
+</head>
+<body>
+  <header id="hello">
+    <h1>{{hello}}</h1>
+    <p>Welcome to my website!</p>
+    <nav>
+      <a href="/">Home</a>
+      <a :href="email">Contact me</a>
+    </nav>
+  </header>
+
+  <main>
+    <p>
+      I totally fall in love with web development. Everything is really charming like Ruby on Rails, ASP.NET, PHP or even the classic ASP.I also finished all of my works with heart. It might sounds over-talking but it is true :)
+      <br/><br/>
+      Experience, experience, and more experience.
+    </p>
+  </main>
+
+  <footer>
+    <p>Sasha Revzin's website.</p>
+  </footer>
+  <script>
+    const ConditionalRenderingApp = {
+      data() {
+        return {
+          hello: "Hello world",
+          email: "mailto:sasha.nike@gmail.com"
         }
       }
-      Vue.createApp(ConditionalRenderingApp).mount('#app')
-    </script>
-  </body>
+    }
+    Vue.createApp(ConditionalRenderingApp).mount('#hello')
+  </script>
+</body>
 </html>
