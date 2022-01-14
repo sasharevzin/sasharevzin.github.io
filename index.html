@@ -1,2 +1,20 @@
-Hello World2
-
+<html>
+  <head>
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      {{ hello }}
+    </div>
+    <script>
+      const ConditionalRenderingApp = {
+        data() {
+          return {
+            hello: "Hello world"
+          }
+        }
+      }
+      Vue.createApp(ConditionalRenderingApp).mount('#app')
+    </script>
+  </body>
+</html>
